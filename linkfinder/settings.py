@@ -27,7 +27,8 @@ SECRET_KEY = "django-insecure-o$+2bvb64uw+*^vm+3)fl1so%iqaxg0f0)!!8j&@d_8bce1^89
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['link-finder-app.onrender.com', 'localhost', '127.0.0.1']
+
 
 
 # Application definition
