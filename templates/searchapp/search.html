@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Finder Tool</title>
+</head>
+<body>
+    <h1>Find Where Your Link is Mentioned</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Search</button>
+    </form>
+    {% if results %}
+        <h2>Results:</h2>
+        <ul>
+        {% for result in results %}
+            <li><a href="{{ result.link }}" target="_blank">{{ result.title }}</a></li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
